@@ -1,0 +1,24 @@
+create database user_management;
+
+use user_management;
+
+CREATE TABLE user_details (
+  user_id INT NOT NULL AUTO_INCREMENT,
+  username VARCHAR(45) NOT NULL,
+  firstname VARCHAR(45) NULL,
+  lastname VARCHAR(45) NULL,
+  registerdate DATE NULL,
+  password VARCHAR(225) NOT NULL,
+  PRIMARY KEY (`user_id`));
+
+CREATE TABLE contact_details (
+  idcontact_details INT NOT NULL AUTO_INCREMENT,
+  mainphonenumber VARCHAR(45) NOT NULL,
+  secondphonenumber VARCHAR(45) NULL,
+  thirdphonenumber VARCHAR(45) NULL,
+  firstemail VARCHAR(45) NOT NULL,
+  secondemail VARCHAR(45) NULL,
+  residenceplace VARCHAR(255) NULL,
+  userid INT NOT NULL,
+  PRIMARY KEY (`idcontact_details`),
+  FOREIGN KEY (userid) REFERENCES user_details(user_id));

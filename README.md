@@ -7,4 +7,4 @@ You have to use JDBC driver for mysql to  connect application with database.
 
 You can write your own mysql user password in login-system-jdbc/User-login-system/src/com/company/connect/ConMySql.java file.
 
-With this console application,you can register login and see details,change password.
+With this console application,you can register,login and see details,change password.
